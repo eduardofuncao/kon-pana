@@ -14,12 +14,12 @@
       cli
       viewers
       niri
+      noctalia
       # hyprland
 
       kitty
       tmux
       neovim
-      noctalia
       zen
 
       editing
