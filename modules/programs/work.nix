@@ -1,3 +1,5 @@
+# TODO make web-agent.nix work
+
 { inputs, ... }:
 let
   web-agent-pkg = { pkgs }: pkgs.callPackage ./web-agent.nix {};

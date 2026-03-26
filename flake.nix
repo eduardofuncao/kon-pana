@@ -10,6 +10,10 @@
       inputs.nixpkgs-lib.follows = "nixpkgs-lib";
     };
     import-tree.url = "github:vic/import-tree";
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.xz";
     nixpkgs-lib.follows = "nixpkgs";
     vicinae = {

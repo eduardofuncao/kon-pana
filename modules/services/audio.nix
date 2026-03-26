@@ -11,7 +11,7 @@
     hardware.bluetooth.enable = true;
 
     environment.systemPackages = with pkgs; [
-      pavucontrols
+      pavucontrol
       # alsa-utils
       # wireplumber
       blueman

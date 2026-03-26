@@ -2,7 +2,7 @@
   flake.nixosModules.editing = { pkgs, ... }: {
 
     environment.systemPackages = with pkgs; [
-      ffmpeg obs
+      ffmpeg obs-studio
     ];
 
   };
