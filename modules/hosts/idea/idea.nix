@@ -2,19 +2,19 @@
   flake.nixosConfigurations.idea = inputs.nixpkgs.lib.nixosSystem {
 
     modules = with self.nixosModules; [
-      base
+      core
       idea
-      laptop
+      desktop
       cli
       hyprland
-      kitty
+      # kitty
       niri
       noctalia
       zen
     ];
   };
 
-  nixosModules.idea = {pkgs, ...}: {
+  flake.nixosModules.idea = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       vim
     ];

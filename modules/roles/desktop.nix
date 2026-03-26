@@ -1,10 +1,10 @@
 {
-  flake.nixosModules.desktop = { self, pkgs, ... }: {
-    imports = [
-      self.nixosModules.audio
-      self.nixosModules.graphics
-      self.nixosModules.docker
-      self.nixosModules.kanata
+  flake.nixosModules.desktop = { self, inputs, pkgs, ... }: {
+    imports = with self.nixosModules; [
+      audio
+      graphics
+      docker
+      kanata
     ];
 
     services.greetd = {

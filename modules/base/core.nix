@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.vmbuild = { pkgs, ... }: {
+  flake.nixosModules.core = { pkgs, ... }: {
 
     nixpkgs.config.allowUnfree = true;
 
