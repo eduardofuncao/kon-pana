@@ -3,6 +3,9 @@
 
     nixpkgs.config.allowUnfree = true;
 
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
+
     networking.networkmanager.enable = true;
 
     time.timeZone = "America/Sao_Paulo";
@@ -35,7 +38,10 @@
     };
 
     environment.systemPackages = with pkgs; [
-      neovim git curl wget
+      neovim
+      git
+      curl
+      wget
     ];
 
     system.stateVersion = "25.05";

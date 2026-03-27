@@ -19,6 +19,9 @@
       bemenu
     ];
 
+    services.tuned.enable = true;
+    services.upower.enable = true;
+
     hjem.users.eduardo = {
       files = {
         ".config/noctalia-shell/config.json".source = ./noctalia.json;

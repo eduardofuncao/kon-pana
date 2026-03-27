@@ -26,6 +26,9 @@
 
     ];
 
+    virtualisation.waydroid.enable = true;
+    networking.nftables.enable = true;
+
     environment.shellAliases = {
       emulator = ''LIBGL_DRI3_DISABLE=1 NIX_ANDROID_EMULATOR_FLAGS="-gpu host -accel on -no-snapshot -memory 4096 -cores 4 -no-metrics" steam-run run-test-emulator'';
     };
