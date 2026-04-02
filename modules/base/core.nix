@@ -30,6 +30,7 @@
     services.xserver = {
       xkb.layout = "br";
       xkb.variant = "abnt2";
+      xkb.options = "caps:swapescape";
     };
 
     users.defaultUserShell = pkgs.fish;

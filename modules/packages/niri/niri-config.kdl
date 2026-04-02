@@ -422,6 +422,11 @@ binds {
     Mod+y { spawn-sh "~/.local/bin/kipr yank"; }
     Mod+p { spawn-sh "~/.local/bin/kipr paste"; }
 
+    // warpd
+    Mod+n { spawn-sh "warpd --normal"; }
+    Mod+m { spawn-sh "warpd --hint --oneshot --click 1"; }
+    Mod+b { spawn-sh "warpd --hint"; }
+
     // noctalia-shell
     Mod+Shift+E { spawn-sh "noctalia-shell ipc call sessionMenu toggle"; }
     Mod+E { spawn-sh "noctalia-shell ipc call controlCenter toggle"; }

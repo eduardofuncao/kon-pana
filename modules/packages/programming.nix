@@ -7,7 +7,7 @@
       gnumake
       cmake
       nodejs
-      nodePackages.npm
+      # nodePackages.npm -> unmantained
       go
       cargo rustc
       delve

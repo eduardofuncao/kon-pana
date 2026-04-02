@@ -1,4 +1,8 @@
 {inputs, ...}: {
+  flake-file.inputs.stylix = {
+    url = "github:nix-community/stylix";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
   flake.nixosModules.stylix = {pkgs, ...}: {
     imports = [inputs.stylix.nixosModules.stylix];
 

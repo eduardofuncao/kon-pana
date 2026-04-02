@@ -7,7 +7,7 @@
       stylix
 
       # services
-      audio graphics kanata
+      audio graphics warpd #kanata
       greetd
       docker
       vicinae
@@ -15,6 +15,7 @@
       # packages
       core
       cli
+      squix
       viewers
       niri
       noctalia
