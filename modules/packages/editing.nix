@@ -1,7 +1,7 @@
 { self, ... }: {
   flake.nixosModules.editing = { pkgs, ... }: {
     imports = with self.nixosModules; [
-      # affinity
+      affinity
     ];
 
     environment.systemPackages = with pkgs; [

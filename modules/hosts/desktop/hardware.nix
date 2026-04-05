@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.idea = { config, lib, pkgs, modulesPath, ... }: {
+  flake.nixosModules.desktop = { config, lib, pkgs, modulesPath, ... }: {
     imports =
       [ (modulesPath + "/installer/scan/not-detected.nix")
       ];

@@ -1,18 +1,18 @@
 { inputs, self, ... }: {
-  flake.nixosConfigurations.idea = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.desktop = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
-      idea
+      desktop
     ];
   };
 
 
-  flake.nixosModules.idea = {pkgs, ...}: {
+  flake.nixosModules.desktop = {pkgs, ...}: {
     imports = with self.nixosModules; [
       hjem
       stylix
 
       # services
-      audio graphics warpd #kanata
+      audio graphics warpd
       greetd
       docker
       vicinae
@@ -32,8 +32,6 @@
 
       editing
       programming
-      # gaming
-      work
     ];
 
   };
