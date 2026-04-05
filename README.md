@@ -3,7 +3,7 @@
 # nali 
 > nasin lili pi ilo nanpa
 
-A minimal nixos configuration example using the dendritic patter with [flake-parts](https://github.com/hercules-ci/flake-parts), [flake-file](https://github.com/vic/flake-file) and [hjem](https://github.com/feel-co/hjem). Using niri-wm and noctalia-shell
+A minimal nixos configuration example using the dendritic pattern with [flake-parts](https://github.com/hercules-ci/flake-parts), [flake-file](https://github.com/vic/flake-file) and [hjem](https://github.com/feel-co/hjem). Using niri-wm and noctalia-shell
 
 If you'd like to know more about the dendritic pattern for you nixos configuration, read [doc-steve's guide](https://github.com/Doc-Steve/dendritic-design-with-flake-parts/tree/main/modules), and [filip-ruman's practical implementation tips](https://filip-ruman.pages.dev/nixos_config/config_structure/). These were incredibly helpful when I started rewriting my config.
 
