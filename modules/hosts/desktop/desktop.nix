@@ -12,7 +12,8 @@
       stylix
 
       # services
-      audio graphics warpd
+      audio
+      graphics
       greetd
       docker
       vicinae
