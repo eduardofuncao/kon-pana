@@ -14,7 +14,7 @@ To rebuild the system, use `sudo nixos-rebuild switch --flake .#desktop`
 If you need to create a configuration for another host, you can add it in `hosts/` following the same structure as `desktop.nix` and build your combining any of the modules
 
 ## Adding flake inputs
-*flake-file* is used to add flake inputs from the same config file where they will be used. For example, we can see this in the `zen.nix` module:
+[flake-file](https://github.com/vic/flake-file) is used to add flake inputs from the same config file where they will be used. For example, we can see this in the `zen.nix` module:
 ```nix
 {inputs, ...}: {
   flake-file.inputs.zen-browser = {
@@ -31,7 +31,7 @@ If you need to create a configuration for another host, you can add it in `hosts
 After adding this, flake-file update the flake.nix file using `nix run .#write-flake`
 
 ## Sourcing config files without home-manager
-To source config files from other programs using nix, we use hjem. For example, this is the tmux module, where we source a tmux.conf file that is located in the same directory as tmux.nix to be available at `~/.config/tmux/tmux.conf` after rebuilding the system:
+To source config files from other programs using nix, we use [hjem](https://github.com/feel-co/hjem). For example, this is the tmux module, where we source a tmux.conf file that is located in the same directory as tmux.nix to be available at `~/.config/tmux/tmux.conf` after rebuilding the system:
 ```nix
 {
   flake.nixosModules.tmux = {pkgs, ...}: {
