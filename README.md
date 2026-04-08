@@ -3,18 +3,32 @@
 # nali 
 > nasin lili pi ilo nanpa
 
-A minimal nixos configuration example using the dendritic patter with [flake-parts](https://github.com/hercules-ci/flake-parts), [flake-file](https://github.com/vic/flake-file) and [hjem](https://github.com/feel-co/hjem). Using niri-wm and noctalia-shell
+A minimal nixos configuration example using the dendritic patter with
+[flake-parts](https://github.com/hercules-ci/flake-parts),
+[flake-file](https://github.com/vic/flake-file) and
+[hjem](https://github.com/feel-co/hjem). Using niri-wm and noctalia-shell
 
-If you'd like to know more about the dendritic pattern for you nixos configuration, read [doc-steve's guide](https://github.com/Doc-Steve/dendritic-design-with-flake-parts/tree/main/modules), and [filip-ruman's practical implementation tips](https://filip-ruman.pages.dev/nixos_config/config_structure/). These were incredibly helpful when I started rewriting my config.
+If you'd like to know more about the dendritic pattern for you nixos
+configuration, read [doc-steve's
+guide](https://github.com/Doc-Steve/dendritic-design-with-flake-parts/tree/main/modules),
+and [filip-ruman's practical implementation
+tips](https://filip-ruman.pages.dev/nixos_config/config_structure/). These were
+incredibly helpful when I started rewriting my config.
 
 ## Configuration entry point and Rebuilding the system
-The entry point for building the system is in `modules/hosts/desktop/desktop.nix`. From this file, hardware.nix is sourced and all other modules are imported
+The entry point for building the system is in
+`modules/hosts/desktop/desktop.nix`. From this file, hardware.nix is sourced
+and all other modules are imported
 To rebuild the system, use `sudo nixos-rebuild switch --flake .#desktop`
 
-If you need to create a configuration for another host, you can add it in `hosts/` following the same structure as `desktop.nix` and build your combining any of the modules
+If you need to create a configuration for another host, you can add it in
+`hosts/` following the same structure as `desktop.nix`, and build your new configuration combining
+any of the modules
 
 ## Adding flake inputs
-[flake-file](https://github.com/vic/flake-file) is used to add flake inputs from the same config file where they will be used. For example, we can see this in the `zen.nix` module:
+[flake-file](https://github.com/vic/flake-file) is used to add flake inputs
+from the same config file where they will be used. For example, we can see this
+in the `zen.nix` module:
 ```nix
 {inputs, ...}: {
   flake-file.inputs.zen-browser = {
@@ -28,10 +42,14 @@ If you need to create a configuration for another host, you can add it in `hosts
   };
 }
 ```
-After adding this, flake-file update the flake.nix file using `nix run .#write-flake`
+After adding this, you can use flake-file to update flake.nix using `nix run .#write-flake`
 
 ## Sourcing config files without home-manager
-To source config files from other programs using nix, we use [hjem](https://github.com/feel-co/hjem). For example, this is the tmux module, where we source a tmux.conf file that is located in the same directory as tmux.nix to be available at `~/.config/tmux/tmux.conf` after rebuilding the system:
+To source config files from other programs using nix, we use
+[hjem](https://github.com/feel-co/hjem). For example, this is the tmux module,
+where we source a tmux.conf file that is located in the same directory as
+tmux.nix to be available at `~/.config/tmux/tmux.conf` after rebuilding the
+system:
 ```nix
 {
   flake.nixosModules.tmux = {pkgs, ...}: {
