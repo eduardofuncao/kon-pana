@@ -12,6 +12,8 @@
       putty
       steam-run
       bruno
+      chromium
+      firefox
 
       httptoolkit
       scrcpy

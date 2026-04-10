@@ -19,7 +19,7 @@
       serviceConfig = {
         Type = "simple";
         # ExecStart = "${inputs.vicinae.packages.${pkgs.stdenv.hostPlatform.system}.default}/bin/vicinae server";
-        ExecStart = "vicinae server";
+        ExecStart = "${pkgs.vicinae}/bin/vicinae server";
         Restart = "always";
         RestartSec = "5";
         KillMode = "process";
