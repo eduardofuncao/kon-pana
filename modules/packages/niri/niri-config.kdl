@@ -423,9 +423,10 @@ binds {
     Mod+p { spawn-sh "~/.local/bin/kipr paste"; }
 
     // warpd
-    Mod+n { spawn-sh "warpd --normal"; }
-    Mod+m { spawn-sh "warpd --hint --oneshot --click 1"; }
-    Mod+b { spawn-sh "warpd --hint"; }
+    // Mod+n { spawn-sh "warpd --normal"; }
+    // Mod+m { spawn-sh "warpd --hint --oneshot --click 1"; }
+    // Mod+b { spawn-sh "warpd --hint"; }
+    Shift+Backspace { spawn-sh "neru recursive_grid"}
 
     // noctalia-shell
     Mod+Shift+E { spawn-sh "noctalia-shell ipc call sessionMenu toggle"; }
