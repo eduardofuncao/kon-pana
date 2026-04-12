@@ -12,7 +12,8 @@
       stylix
 
       # services
-      audio graphics warpd #kanata
+      audio graphics #kanata
+      neru
       greetd
       docker
       vicinae

@@ -426,7 +426,8 @@ binds {
     // Mod+n { spawn-sh "warpd --normal"; }
     // Mod+m { spawn-sh "warpd --hint --oneshot --click 1"; }
     // Mod+b { spawn-sh "warpd --hint"; }
-    Shift+Backspace { spawn-sh "neru recursive_grid"}
+    Shift+Backspace { spawn-sh "neru recursive_grid"; }
+    Ctrl+Shift+Backspace { spawn-sh "neru scroll"; }
 
     // noctalia-shell
     Mod+Shift+E { spawn-sh "noctalia-shell ipc call sessionMenu toggle"; }

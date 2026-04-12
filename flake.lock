@@ -478,6 +478,26 @@
         "type": "github"
       }
     },
+    "neru": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1775995509,
+        "narHash": "sha256-O/zhxj9gnYIPkXT4J+4fmrAYAWDqd1JRR2vySEZdWF4=",
+        "owner": "y3owk1n",
+        "repo": "neru",
+        "rev": "b0190ffdb1b9e5dc174fa7bdd4bddd1b6ea931e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "y3owk1n",
+        "repo": "neru",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -682,6 +702,7 @@
         "hjem": "hjem",
         "import-tree": "import-tree",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
+        "neru": "neru",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-lib": [
           "nixpkgs"
