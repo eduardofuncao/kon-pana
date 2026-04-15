@@ -29,7 +29,7 @@
       neovim
       squix
       viewers
-      zen helium
+      zen helium #affinity
 
       editing
       programming

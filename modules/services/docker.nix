@@ -3,7 +3,11 @@
 
     virtualisation.docker = {
       enable = true;
-      autoPrune.enable = true;
+      enableOnBoot = false;
+      autoPrune = {
+        enable = true;
+        dates = "weekly";
+      };
     };
 
     environment.systemPackages = with pkgs; [

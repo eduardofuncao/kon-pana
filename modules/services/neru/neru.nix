@@ -17,7 +17,7 @@
 
     systemd.user.services.neru = {
       enable = true;
-      description = "Neru mouse emulation";
+      description = "Navigate and click without touching your mouse";
       after = [ "graphical-session.target" ];
       wantedBy = [ "graphical-session.target" ];
 
