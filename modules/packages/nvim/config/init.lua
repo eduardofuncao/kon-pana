@@ -193,6 +193,7 @@ require("debugconfig")
 require("image")
 
 require("todo")
+require("squix")
 
 -- spellcheck
 vim.opt.spelllang = { "en_us", "pt_br" }
