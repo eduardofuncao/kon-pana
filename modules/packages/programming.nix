@@ -13,6 +13,7 @@
       python3
       openjdk
       gopls
+      golangci-lint
       lua-language-server
       pyright
       nil
